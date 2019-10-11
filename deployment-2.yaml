@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: razee-app-new
+  labels:
+    app: razee
+    version: 2
+spec:
+  selector:
+    matchLabels:
+      app: razee
+  template:
+    metadata:
+      labels:
+        app: razee
+    spec:
+      containers:
+      - image: nginx
+        name: razee-app
